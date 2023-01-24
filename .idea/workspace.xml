@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e96486fa-788a-4d83-8be4-a2ccc738bc44" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AnalyticsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AnalyticsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AuditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AuditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BRERule2Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/BRERule2Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CreateRolePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CreateRolePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DatasetPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/DatasetPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DocumentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/DocumentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/FunctionalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/FunctionalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MedicalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MedicalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Project_Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Project_Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ReportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ReportPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/StructurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/StructurePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AnalyticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AnalyticsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AuditTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AuditTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BRERule2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BRERule2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/DataSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/DataSetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/DocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/DocumentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/FreeFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/FreeFormTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/FunctionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/FunctionalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MedicalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/MedicalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ProjectModuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ProjectModuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ReportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ReportTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/StructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/StructureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/TemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/TemplateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/ClickOnOutSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/ClickOnOutSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/Custome_Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/Custome_Wait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/DateTimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/DateTimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/InitTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/InitTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/ReadProps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/ReadProps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/Scroll_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/Scroll_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/SelectDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/SelectDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/SortingLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/SortingLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/UploadObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/UploadObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/VerifyTextOfTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/VerifyTextOfTable.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2KSGaL7Hz36CsRUHYkkoNm6XwL1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="TestNG.DataSetTest.verifyDatasetIsCreated">
+    <configuration name="DataSetTest.verifyActionButton" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IntelliDoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DataSetTest" />
+      <option name="METHOD_NAME" value="verifyActionButton" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataSetTest.verifyAddNewCategory" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IntelliDoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DataSetTest" />
+      <option name="METHOD_NAME" value="verifyAddNewCategory" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataSetTest.verifyDatasetIsCreated" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IntelliDoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DataSetTest" />
+      <option name="METHOD_NAME" value="verifyDatasetIsCreated" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataSetTest.verifyDatasetNameValidation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IntelliDoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DataSetTest" />
+      <option name="METHOD_NAME" value="verifyDatasetNameValidation" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.verifyOperatorAbleToUpdateUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IntelliDoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.UserTest" />
+      <option name="METHOD_NAME" value="verifyOperatorAbleToUpdateUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.DataSetTest.verifyDatasetIsCreated" />
+        <item itemvalue="TestNG.DataSetTest.verifyDatasetNameValidation" />
+        <item itemvalue="TestNG.DataSetTest.verifyActionButton" />
+        <item itemvalue="TestNG.DataSetTest.verifyAddNewCategory" />
+        <item itemvalue="TestNG.UserTest.verifyOperatorAbleToUpdateUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e96486fa-788a-4d83-8be4-a2ccc738bc44" name="Changes" comment="" />
+      <created>1673960634221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673960634221</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/CreateRoleTest.java</url>
+          <line>677</line>
+          <properties class="Tests.CreateRoleTest" method="verifyRoleWithInvalidrolename">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/DataSetTest.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/ReportTest.java</url>
+          <line>361</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
