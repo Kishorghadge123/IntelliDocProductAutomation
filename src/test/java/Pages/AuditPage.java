@@ -234,4 +234,31 @@ public class AuditPage {
         softAssert.assertEquals(getTheTableHeaderText.get(2).getText(), "Audit Pending");
     }
 
+    @FindBy(xpath = "//span[contains(text(),' Analytics ')]")
+    public WebElement analyticsDropDown;
+
+    public void clickOnAnalyticsDropDown(){
+        this.analyticsDropDown.click();
+    }
+
+    @FindBy(xpath = "//span[contains(text(),' Filter ')]")
+    public WebElement filterDropDown;
+
+    public void clickOnFilterDropDown(){
+        this.filterDropDown.click();
+    }
+
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[1]")
+    public WebElement filterAuditorDropDown;
+
+    public void clickOnAuditorDropDown(){
+        this.filterAuditorDropDown.click();
+    }
+
+   @FindBy(xpath = "//tr[1]//td[1]")
+    public WebElement firstDoc;
+
+    public void ClickOn1stDoc(){
+        this.firstDoc.click();
+    }
 }

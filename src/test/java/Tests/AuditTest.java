@@ -1,6 +1,7 @@
 package Tests;
 
 import Pages.AuditPage;
+import Pages.LoginPage;
 import Utilities.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
@@ -30,6 +31,7 @@ public class AuditTest extends BaseTest {
     Custome_Wait custom;
     SoftAssert softAssert;
     Scroll_Page scroll_page;
+    LoginPage loginPage;
 
     @BeforeMethod
     public void setmethod() throws Exception {
@@ -358,4 +360,101 @@ public class AuditTest extends BaseTest {
         auditPage.getTheTextOfListOfAuditTable();
     }
 
+    @Story("story_id: U022 -To verify navigate to the audit tab by using auditors credentials.")
+    @Description("To verify navigate to the audit tab by using auditors credentials.")
+    @Test(priority = 12, groups = "smoke", description = "To verify navigate to the audit tab by using auditors credentials.")
+    public void verifyAuditorsCredentials() throws Exception {
+        loginPage = new LoginPage(driver);
+        softAssert = new SoftAssert();
+        auditPage = new AuditPage(driver);
+        waitForloadSpinner();
+        loginPage.ClickLogoutBtn();
+        waitForloadSpinner();
+        loginPage.EnterUsername("omkar.ranaware@neutrinotechlabs.com");
+        loginPage.setPassword("Omkar@0955");
+        loginPage.clickLoginButton();
+        waitForloadSpinner();
+        auditPage.clickOnauditTab();
+        waitForloadSpinner();
+        Thread.sleep(3000);
+        softAssert.assertEquals(driver.findElement(By.xpath("//span[@class='ml-2 primary-font-color']")).getText(), "Analytics");
+       softAssert.assertAll();
+    }
+
+    @Story("story_id: U022 -To verify project is being searched")
+    @Description("To verify project is being searched")
+    @Test(priority = 12, groups = "smoke", description = "To verify project is being searched")
+    public void verifyProjectSearched() throws Exception {
+        loginPage = new LoginPage(driver);
+        softAssert = new SoftAssert();
+        auditPage = new AuditPage(driver);
+        waitForloadSpinner();
+        auditPage.clickOnauditTab();
+        waitForloadSpinner();
+        auditPage.selectProject();
+        Thread.sleep(3000);
+        softAssert.assertEquals(driver.findElement(By.xpath("//span[@class='ml-2 primary-font-color']")).getText(), "Analytics");
+        auditPage.clickOnAnalyticsDropDown();
+        Thread.sleep(1000);
+        auditPage.clickOnAnalyticsDropDown();
+        Thread.sleep(2000);
+        softAssert.assertAll();
+
+    }
+    @Story("story_id: U022 -To verify Analytic and filter DropDown")
+    @Description("To verify Analytic and filter DropDown")
+    @Test(priority = 12, groups = "smoke", description = "To verify Analytic and filter DropDown")
+    public void verifyAnalyticAndFilterDropDown() throws Exception {
+        softAssert = new SoftAssert();
+        auditPage = new AuditPage(driver);
+        waitForloadSpinner();
+        auditPage.clickOnauditTab();
+        waitForloadSpinner();
+        auditPage.selectProject();
+        Thread.sleep(3000);
+        softAssert.assertEquals(driver.findElement(By.xpath("//span[@class='ml-2 primary-font-color']")).getText(), "Analytics");
+        auditPage.clickOnAnalyticsDropDown();
+        Thread.sleep(1000);
+        auditPage.clickOnAnalyticsDropDown();
+        Thread.sleep(2000);
+        auditPage.clickOnFilterDropDown();
+        Thread.sleep(1000);
+       auditPage.enterDocName("test");
+        auditPage.clickOnAuditorDropDown();
+        Thread.sleep(1000);
+       driver.findElement(By.xpath("//mat-pseudo-checkbox[@class='mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted']")).click();
+       Thread.sleep(2000);
+       auditPage.clickStatusDropDownArrow();
+       Thread.sleep(1000);
+       auditPage.clickOnAuditedStatus();
+       auditPage.clickOnApplyFilter();
+        softAssert.assertAll();
+
+    }
+
+    @Story("story_id: U022 -To verify the audit and audit pending document is visible with proper status at document viewer.")
+    @Description("To verify the audit and audit pending document is visible with proper status at document viewer.")
+    @Test(priority = 12, groups = "smoke", description = "To verify the audit and audit pending document is visible with proper status at document viewer.")
+    public void verifyPendingDoc() throws Exception {
+        softAssert = new SoftAssert();
+        auditPage = new AuditPage(driver);
+        waitForloadSpinner();
+        auditPage.clickOnauditTab();
+        waitForloadSpinner();
+        auditPage.selectProject();
+        Thread.sleep(3000);
+        softAssert.assertEquals(driver.findElement(By.xpath("//span[@class='ml-2 primary-font-color']")).getText(), "Analytics");
+        auditPage.clickOnAnalyticsDropDown();
+        Thread.sleep(1000);
+        auditPage.clickOnAnalyticsDropDown();
+        Thread.sleep(2000);
+        auditPage.clickOnFilterDropDown();
+        Thread.sleep(1000);
+      auditPage.clickOnApplyFilter();
+      waitForloadSpinner();
+        auditPage.ClickOn1stDoc();
+        waitForloadSpinner();
+        softAssert.assertEquals(driver.findElement(By.xpath("//div[@class='col-md-2 ng-tns-c262-0']")).getText(),"Audit Pending");
+        softAssert.assertAll();
+    }
 }
