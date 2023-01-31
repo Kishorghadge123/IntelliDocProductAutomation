@@ -1008,7 +1008,8 @@ public class DocumentTest extends BaseTest {
     public void manual_intervention_structured_ready_document() throws Exception {
         // upload doc to QA-AutoProject-Structured folder in GCP:
         String document = RandomStringUtils.randomAlphabetic(1);
-        UploadObject.uploadObject(ReadProps.readAttr("project_id"), ReadProps.readAttr("bucket_name"), "inputDocs/QA-Automation Structure/Pfizer" + document + ".jpg", System.getProperty("user.dir") + "\\src\\test\\resources\\Pfizer.jpg");
+        UploadObject.uploadObject(ReadProps.readAttr("project_id"), ReadProps.readAttr("bucket_name"), "inputDocs/QA-Automation Structure/Pfizer" + document + ".jpg", System.getProperty("user.dir") + "\\src\\test\\resources\\structready");
+
         docobj = new DocumentPage(driver);
         Robot r = new Robot();
         docobj.clickOnDocumentTab();

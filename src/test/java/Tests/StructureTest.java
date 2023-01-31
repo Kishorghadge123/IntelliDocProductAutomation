@@ -1,17 +1,23 @@
 package Tests;
 
 import Pages.DocumentPage;
+import Pages.Project_Module;
 import Pages.StructurePage;
-import Utilities.Custome_Wait;
+import Utilities.*;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import java.awt.*;
 
 public class StructureTest extends BaseTest {
 
@@ -19,6 +25,10 @@ public class StructureTest extends BaseTest {
     SoftAssert softAssert;
     DocumentPage docobj;
     Custome_Wait custom;
+    Project_Module project;
+    ClickOnOutSide clickOnOutSide;
+    Scroll_Page s;
+
 
     @BeforeMethod
     public void setmethod() throws Exception {
@@ -218,7 +228,152 @@ public class StructureTest extends BaseTest {
 
 
     }
+
+
+
+
+
+///create struct project utility
+    ///create struct project utility
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Test Case Id: S007 -Create structure Project With All Details")
+    @Description("Create structure Project With All Details")
+    @Test(priority = 7, groups = "smoke", description = "-Create structure Project With All Details")
+    public void CreatestructureProjectWithAllDetails() throws Exception {
+        project=new Project_Module(driver);
+        docobj = new DocumentPage(driver);
+        custom = new Custome_Wait(driver);
+        softAssert = new SoftAssert();
+        project = new Project_Module(driver);
+        clickOnOutSide=new ClickOnOutSide(driver);
+        waitForloadSpinner();
+        project.clickOnCreateProjectButton();
+        waitForloadSpinner();
+        String document = RandomStringUtils.randomAlphabetic(5);
+        String projectname=project.ClickOnTemplateNameNew("QA-Automation-Structure"+document);
+        project.ClickOnLeadBtn();
+        project.selectLead();
+        Thread.sleep(1000);
+        project.selectDateRange("2022", "OCT", "20", "1");
+        Thread.sleep(2000);
+        project.selectDateRange("2022", "OCT", "23", "2");
+        Thread.sleep(2000);
+        project.selectDocumentStructure();
+        Thread.sleep(2000);
+        project.selectProjectType();
+        project.selectprocessengindropdown();
+        project.selectprocessingengine();
+        project.clickstatustogglebutton();
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,50000)", "");
+        Thread.sleep(3000);
+        softAssert.assertTrue(project.templatemsg.isDisplayed());
+        project.clickAddTemplateButton();
+        Thread.sleep(2000);
+        project.selectTemplate();
+        Thread.sleep(1000);
+        project.clickonrolelabel();
+        Thread.sleep(1000);
+        project.clickOnAddRoleButton();
+        Thread.sleep(2000);
+        project.selectRole();
+        Thread.sleep(1000);
+        project.clickOnAdduserButton();
+        Thread.sleep(1000);
+        project.selectUser();
+        Thread.sleep(1000);
+        clickOnOutSide.clickOutside();
+        Thread.sleep(2000);
+        project.clickOnCreateButton();
+        waitForloadSpinner();
+        softAssert.assertEquals(driver.getCurrentUrl(),"https://alpha.neutrino-ai.com/#/home/project-management");
+        Thread.sleep(2000);
+        UploadObject.uploadObject(ReadProps.readAttr("project_id"), ReadProps.readAttr("bucket_name"), "inputDocs /"+projectname+" structready" + document + ".jpg", System.getProperty("user.dir") + "\\src\\test\\resources\\structready.jpg");
+        docobj = new DocumentPage(driver);
+        s=new Scroll_Page(driver);
+        docobj.clickOnDocumentTab();
+       waitForloadSpinner();
+        Thread.sleep(2000);
+        s.ScrollUpDown(driver.findElement(By.xpath("//span[@mattooltip=\"Logout\"]")));
+        Thread.sleep(2000);
+        docobj.clickOnDropdown();
+        Thread.sleep(2000);
+        docobj.selectProjectFromDropDown(projectname);
+        Thread.sleep(2000);
+        docobj.clickOnSelectedProject();
+        Thread.sleep(10000);
+        driver.navigate().refresh();
+        Thread.sleep(3000);
+    }
+
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Test Case Id: S007 -Create structure Project With All Details with straight through process")
+    @Description("Create structure Project With All Details with straight through process")
+    @Test(priority = 7, groups = "smoke", description = "-Create structure Project With All Details with straight through process")
+    public void CreatestructureProjectWithAllDetailsWithstraightthroughprocess() throws Exception {
+        project=new Project_Module(driver);
+        docobj = new DocumentPage(driver);
+        custom = new Custome_Wait(driver);
+        softAssert = new SoftAssert();
+        project = new Project_Module(driver);
+        s=new Scroll_Page(driver);
+        clickOnOutSide=new ClickOnOutSide(driver);
+        waitForloadSpinner();
+        project.clickOnCreateProjectButton();
+        waitForloadSpinner();
+        project.ClickOnTemplateNameNew("QA-Automation Structure");
+        project.ClickOnLeadBtn();
+        project.selectLead();
+        Thread.sleep(1000);
+        project.selectDateRange("2022", "OCT", "20", "1");
+        Thread.sleep(2000);
+        project.selectDateRange("2022", "OCT", "23", "2");
+        Thread.sleep(2000);
+        project.selectDocumentStructure();
+        Thread.sleep(2000);
+        project.selectProjectType();
+        project.selectprocessengindropdown();
+        project.selectprocessingengine();
+        Thread.sleep(1000);
+        project.clickauditenabletogglebtn();
+        Thread.sleep(1000);
+        project.clickStraightThroughProcesstogglebtn();
+        softAssert.assertEquals(driver.findElement(By.xpath("//div[@class='col-lg-6 pr-0 d-flex align-items-center ng-tns-c224-4']")).getText(), "Document Score (0-100)");
+        Thread.sleep(1000);
+        project.EnterDocumentScore(100);
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,50000)", "");
+        Thread.sleep(3000);
+        softAssert.assertTrue(project.templatemsg.isDisplayed());
+        project.clickAddTemplateButton();
+        Thread.sleep(2000);
+        project.selectTemplate();
+        project.clickonrolelabel();
+        project.clickOnAddRoleButton();
+        Thread.sleep(2000);
+//        driver.findElement(By.xpath("(//button[contains(text(),'Operator')])[1]")).click();
+        project.selectRole();
+        Thread.sleep(1000);
+        project.clickOnAdduserButton();
+        Thread.sleep(1000);
+        project.selectUser();
+        Thread.sleep(1000);
+        clickOnOutSide.clickOutside();
+        Thread.sleep(2000);
+        project.clickOnCreateButton();
+        waitForloadSpinner();
+        softAssert.assertEquals(driver.getCurrentUrl(),"https://alpha.neutrino-ai.com/#/home/project-management");
+
+    }
+
+
 }
+
+
+
+
 
 
 

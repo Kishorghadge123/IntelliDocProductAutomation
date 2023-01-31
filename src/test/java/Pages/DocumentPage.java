@@ -284,6 +284,10 @@ public class DocumentPage {
     public WebElement processedCheckBox;
 
 
+    @FindBy(xpath = "//button[@class=\"mat-focus-indicator selected-project mat-menu-item\"]")
+    public WebElement selectedProject;
+
+
     @FindBy(xpath = "//mat-icon[contains(text(),'visibility')]")
     public WebElement action1;
 
@@ -376,6 +380,11 @@ public class DocumentPage {
         /*Custome_Wait.waitVisibility
                 (driver, driver.findElement(By.xpath("//span[contains(text(),' "+projectName+" ')]")));*/
         driver.findElement(By.xpath("//span[contains(text(),' " + projectName + " ')]")).click();
+    }
+
+
+    public void clickOnSelectedProject(){
+        this.selectedProject.click();
     }
 
     public void clickOnApplyButton() {
