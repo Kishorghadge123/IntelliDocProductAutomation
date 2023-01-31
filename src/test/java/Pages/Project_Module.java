@@ -5,7 +5,6 @@ import java.util.Random;
 import Utilities.Custome_Wait;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -13,7 +12,7 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.asserts.SoftAssert;;import javax.security.auth.x500.X500Principal;
+import org.testng.asserts.SoftAssert;;
 
 public class Project_Module {
 
@@ -191,6 +190,9 @@ public class Project_Module {
 
     @FindBy(xpath = "//span[contains(text(),'Roles')]")
     public WebElement rolelabel;
+
+    @FindBy(xpath="(//mat-icon[contains(text(),'add_circle_outline')])[2]")
+    public WebElement adduserbtn;
 
 
     @FindBy(xpath = "//span[contains(text(), 'Add Role ')]")
@@ -719,13 +721,12 @@ public class Project_Module {
         this.updatebtn1.click();
     }
     @Step("ClickOnTemplateNameNew")
-    public void ClickOnTemplateNameNew(String text) {
+    public String ClickOnTemplateNameNew(String text) {
         Random r = new Random();
-        char first_c = (char) (r.nextInt(26) + 'a');
-        char second_c = (char) (r.nextInt(26) + 'a');
-        this.enterprojectname.sendKeys(text + first_c + second_c);
+        this.enterprojectname.sendKeys(text );
         this.enterprojectname.click();
 
+        return text;
     }
 
     public void ClickOnLeadBtn() throws Exception
@@ -817,6 +818,11 @@ public class Project_Module {
     }
     public  void clickOnAddRoleButton(){
         this.addrole.click();
+    }
+
+
+    public  void clickOnAdduserButton(){
+        this.adduserbtn.click();
     }
     public void selectRole(){
         this.selectrole.click();

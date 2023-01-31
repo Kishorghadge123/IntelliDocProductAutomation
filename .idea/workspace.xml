@@ -5,43 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96486fa-788a-4d83-8be4-a2ccc738bc44" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/structready.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AnalyticsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AnalyticsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AuditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AuditPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BRERule2Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/BRERule2Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CreateRolePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CreateRolePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DatasetPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/DatasetPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DocumentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/DocumentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/FunctionalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/FunctionalPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MedicalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MedicalPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Project_Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Project_Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ReportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ReportPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/StructurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/StructurePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AnalyticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AnalyticsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AuditTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AuditTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BRERule2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BRERule2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/DataSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/DataSetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/DocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/DocumentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/FreeFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/FreeFormTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/FunctionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/FunctionalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MedicalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/MedicalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ProjectModuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ProjectModuleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ReportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ReportTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/StructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/StructureTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/TemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/TemplateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/ClickOnOutSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/ClickOnOutSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/Custome_Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/Custome_Wait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/DateTimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/DateTimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/InitTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/InitTestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/ReadProps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/ReadProps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/Scroll_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/Scroll_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/SelectDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/SelectDates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/SortingLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/SortingLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/UploadObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/UploadObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/VerifyTextOfTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/VerifyTextOfTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/AnalyticsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/AnalyticsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/AuditPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/AuditPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/BRERule2Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/BRERule2Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/CreateRolePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/CreateRolePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/DatasetPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/DatasetPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/DocumentPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/DocumentPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/FunctionalPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/FunctionalPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/MedicalPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/MedicalPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/Project_Module.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/Project_Module.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/ReportPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/ReportPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/TemplatePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/TemplatePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/AnalyticsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/AnalyticsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/AuditTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/AuditTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/BRERule2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/BRERule2Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/DataSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/DataSetTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/DocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/DocumentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/FunctionalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/FunctionalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/MedicalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/MedicalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/ProjectModuleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/ProjectModuleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/ReportTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/ReportTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/StructureTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/StructureTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/TemplateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/TemplateTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/UserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/ClickOnOutSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/ClickOnOutSide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/Custome_Wait.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/Custome_Wait.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/ReadProps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/ReadProps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/Scroll_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/Scroll_Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/SelectDates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/SelectDates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/SortingLists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/SortingLists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/VerifyTextOfTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/VerifyTextOfTable.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,52 +69,28 @@
     </option>
   </component>
   <component name="ProjectId" id="2KSGaL7Hz36CsRUHYkkoNm6XwL1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../24JUNE/IntilliDoc_Product_JAN2022" />
   </component>
-  <component name="RunManager" selected="TestNG.DataSetTest.verifyDatasetIsCreated">
-    <configuration name="DataSetTest.verifyActionButton" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="IntelliDoc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.DataSetTest" />
-      <option name="METHOD_NAME" value="verifyActionButton" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataSetTest.verifyAddNewCategory" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="IntelliDoc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.DataSetTest" />
-      <option name="METHOD_NAME" value="verifyAddNewCategory" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\ProductAutomation\24-01-2023\Updatedintllidocautomationcode\src\test\resources\env_configs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ProductAutomation\24-01-2023\Updatedintllidocautomationcode\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.StructureTest.CreatestructureProjectWithAllDetails">
     <configuration name="DataSetTest.verifyDatasetIsCreated" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="IntelliDoc" />
       <extension name="coverage">
@@ -133,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataSetTest.verifyDatasetNameValidation" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DocumentTest.manual_intervention_structured_ready_document" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="IntelliDoc" />
       <extension name="coverage">
         <pattern>
@@ -142,8 +118,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.DataSetTest" />
-      <option name="METHOD_NAME" value="verifyDatasetNameValidation" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DocumentTest" />
+      <option name="METHOD_NAME" value="manual_intervention_structured_ready_document" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -151,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.verifyOperatorAbleToUpdateUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectModuleTest.Update_Project_Without_When_User_is_disable" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="IntelliDoc" />
       <extension name="coverage">
         <pattern>
@@ -160,8 +136,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.UserTest" />
-      <option name="METHOD_NAME" value="verifyOperatorAbleToUpdateUser" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ProjectModuleTest" />
+      <option name="METHOD_NAME" value="Update_Project_Without_When_User_is_disable" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StructureTest.CreatestructureProjectWithAllDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IntelliDoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.StructureTest" />
+      <option name="METHOD_NAME" value="CreatestructureProjectWithAllDetails" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StructureTest.CreatestructureProjectWithAllDetailsWithstraightthroughprocess" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IntelliDoc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.StructureTest" />
+      <option name="METHOD_NAME" value="CreatestructureProjectWithAllDetailsWithstraightthroughprocess" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -171,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.StructureTest.CreatestructureProjectWithAllDetails" />
+        <item itemvalue="TestNG.StructureTest.CreatestructureProjectWithAllDetailsWithstraightthroughprocess" />
+        <item itemvalue="TestNG.ProjectModuleTest.Update_Project_Without_When_User_is_disable" />
+        <item itemvalue="TestNG.DocumentTest.manual_intervention_structured_ready_document" />
         <item itemvalue="TestNG.DataSetTest.verifyDatasetIsCreated" />
-        <item itemvalue="TestNG.DataSetTest.verifyDatasetNameValidation" />
-        <item itemvalue="TestNG.DataSetTest.verifyActionButton" />
-        <item itemvalue="TestNG.DataSetTest.verifyAddNewCategory" />
-        <item itemvalue="TestNG.UserTest.verifyOperatorAbleToUpdateUser" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +213,9 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -212,6 +227,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/StructureTest.java</url>
+          <line>241</line>
+          <properties class="Tests.StructureTest" method="CreatestructureProjectWithAllDetails">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Tests/DataSetTest.java</url>
