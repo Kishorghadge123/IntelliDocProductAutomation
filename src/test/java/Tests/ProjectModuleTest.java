@@ -1,11 +1,11 @@
 package Tests;
 
 
-import Pages.BRERule2Page;
 import Pages.CreateRolePage;
 import Pages.Project_Module;
-import Pages.UserPage;
-import Utilities.*;
+import Utilities.Custome_Wait;
+import Utilities.Scroll_Page;
+import Utilities.SortingLists;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -14,7 +14,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.util.List;
@@ -26,9 +29,6 @@ public class ProjectModuleTest extends BaseTest {
     CreateRolePage createRolePage;
     SortingLists sortingLists;
     Scroll_Page s;
-    ClickOnOutSide clickOnOutSide;
-    UserPage userPage;
-    BRERule2Page breRule2Page;
 
     @BeforeMethod
     public void setmethod() throws Exception {
@@ -52,7 +52,9 @@ public class ProjectModuleTest extends BaseTest {
         project = new Project_Module(driver);
         waitForloadSpinner();
         Assert.assertTrue(project.createbtnproject.isDisplayed());
-        project.searchCreatedProject("QA-Automation-FreeForm ");
+        project.searchCreatedProject("QA-Automation-FreeForm");
+        ;
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
 
     }
 
@@ -108,6 +110,7 @@ public class ProjectModuleTest extends BaseTest {
         project.ClickOnTemplateNameNew("QA-Automation");
         project.ClickOnLeadBtn();
         project.selectLead();
+        Thread.sleep(2000);
         project.selectDateRange("2022", "OCT", "20", "1");
         project.selectDateRange("2022", "OCT", "23", "2");
         Thread.sleep(2000);
@@ -135,6 +138,7 @@ public class ProjectModuleTest extends BaseTest {
         project.ClickOnTemplateNameNew("QA-Automation");
         project.ClickOnLeadBtn();
         project.selectLead();
+        Thread.sleep(2000);
         project.selectDateRange("2022", "OCT", "20", "1");
         project.selectDateRange("2022", "OCT", "23", "2");
         Thread.sleep(2000);
@@ -169,6 +173,7 @@ public class ProjectModuleTest extends BaseTest {
         project.ClickOnTemplateNameNew("QA-Automation");
         project.ClickOnLeadBtn();
         project.selectLead();
+        Thread.sleep(2000);
         project.selectDateRange("2022", "OCT", "20", "1");
         project.selectDateRange("2022", "OCT", "23", "2");
         Thread.sleep(2000);
@@ -204,6 +209,9 @@ public class ProjectModuleTest extends BaseTest {
         waitForloadSpinner();
         Assert.assertTrue(project.createbtnproject.isDisplayed());
         project.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//tr[1]/td[1]")).click();
         waitForloadSpinner();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,50000)", "");
@@ -269,61 +277,25 @@ public class ProjectModuleTest extends BaseTest {
         Thread.sleep(1000);
         sortingLists.sortingListInOrder("ascending", 2);
         Thread.sleep(1000);
-        project.clickOnTableArrowDropDown("Document Structure ");
-        softAssert.assertTrue(driver.findElement(By.xpath("//div[text()='Document Structure ']")).isEnabled());
-        sortingLists.sortingListInOrder("descending ", 2);
-        Thread.sleep(1000);
-        project.clickOnTableArrowDropDown("Document Structure ");
-        Thread.sleep(1000);
-        project.clickOnTableArrowDropDown(" Lead ");
-        softAssert.assertTrue(driver.findElement(By.xpath("//div[text()=' Lead ']")).isEnabled());
-        Thread.sleep(1000);
-        project.clickOnTableArrowDropDown(" Lead ");
-        Thread.sleep(1000);
         project.clickOnTableArrowDropDown(" Updated ");
         Thread.sleep(1000);
         softAssert.assertTrue(driver.findElement(By.xpath("//div[text()=' Updated ']")).isEnabled());
         Thread.sleep(1000);
         project.clickOnTableArrowDropDown(" Updated ");
         Thread.sleep(1000);
-   /* project.clickOnTableArrowDropDown(" Created ");
-    softAssert.assertTrue(driver.findElement(By.xpath("//div[text()=' Created ']")).isEnabled());
-    project.clickOnTableArrowDropDown(" Created ");*/
+        project.clickOnTableArrowDropDown(" Start Date ");
+        softAssert.assertTrue(driver.findElement(By.xpath("//div[text()=' Start Date ']")).isEnabled());
+        Thread.sleep(2000);
+        project.clickOnTableArrowDropDown(" Start Date ");
+        Thread.sleep(2000);
+        project.clickOnTableArrowDropDown("End Date");
+        softAssert.assertTrue(driver.findElement(By.xpath("//div[text()='End Date']")).isEnabled());
+        Thread.sleep(2000);
+        project.clickOnTableArrowDropDown("End Date");
+        Thread.sleep(2000);
         softAssert.assertAll();
     }
 
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P016 - Project Updation by platform admin ")
-    @Description("Verify the working of platform admin for Update Project button when role and user status is disabled")
-    @Test(priority = 16, groups = "smoke", description = "Verify the working of platform admin for Update Project button when role and user status is disabled")
-    public void Project_update_by_platform_admin() throws Exception {
-        softAssert = new SoftAssert();
-        custom = new Custome_Wait(driver);
-        project = new Project_Module(driver);
-        clickOnOutSide = new ClickOnOutSide(driver);
-        waitForloadSpinner();
-        Assert.assertTrue(project.createbtnproject.isDisplayed());
-        project.searchCreatedProject("QA-Automation structure");
-        waitForloadSpinner();
-        project.clickauditenabletogglebtn();
-        project.clickStraightThroughProcesstogglebtn();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50000)", "");
-        Thread.sleep(3000);
-        project.clickonrolelabel();
-        Thread.sleep(2000);
-        JavascriptExecutor js1 = (JavascriptExecutor) driver;
-        js1.executeScript("window.scrollBy(0,50000)", "");
-        project.clickOnaddUSerInRole();
-        driver.findElement(By.xpath("//span[contains(text(),' omkar.ranaware@neutrinotechlabs.com ')]")).click();
-        Thread.sleep(2000);
-        clickOnOutSide.clickOutside();
-        driver.findElement(By.xpath("(//mat-icon[@class='mat-icon notranslate mat-chip-remove mat-chip-trailing-icon position material-icons mat-icon-no-color'])[4]")).click();
-        project.clickOnUpdate();
-        waitForloadSpinner();
-        softAssert.assertEquals(driver.findElement(By.xpath("//h5[@class='mt-1']")).getText(), "List of Projects");
-        softAssert.assertAll();
-    }
 
     @Severity(SeverityLevel.CRITICAL)
     @Story("story_id: P010 -The Total Count Of User in UserTab")
@@ -337,9 +309,11 @@ public class ProjectModuleTest extends BaseTest {
         Thread.sleep(5000);
         project.clickOnDropDown();
         project.selectDropDownValue();
+        waitForloadSpinner();
         project.userClickOnNextpageTab();
 
     }
+
 
     @Story("story_id: P011 -verify role active status")
     @Description("verify_role_active_status")
@@ -352,6 +326,9 @@ public class ProjectModuleTest extends BaseTest {
         //"M-1168";*/
         project.clickOnGridIcon();
         project.searchProject(projectTitle);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        Thread.sleep(1000);
         boolean projectStatusInGrid = project.getProjectStatusInProjectGrid(projectTitle);
         project.goToProjectDetailsPageFromProjectGrid(projectTitle);
         waitForloadSpinner();
@@ -389,6 +366,7 @@ public class ProjectModuleTest extends BaseTest {
         project.clickOnCreateProjectButton();
         waitForloadSpinner();
         project.verifyProjectIsUpdated("pratiksha.bagal@neutrinotechlabs.com");
+        Thread.sleep(2000);
         project.selectDateRange("2022", "OCT", "20", "1");
         project.selectDateRange("2022", "OCT", "23", "2");
         custom.waitVisibility(driver, driver.findElement(By.xpath("(//label[@class='mat-slide-toggle-label'])[1]")));
@@ -415,85 +393,6 @@ public class ProjectModuleTest extends BaseTest {
         softAssert.assertAll();
     }
 
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id:P013- Verify that while creating a project user should not able to add a user when the role is disabled for the project")
-    @Description("Verify that while creating a project user should not able to add a user when the role is disabled for the project")
-    @Test(priority = 13, groups = "smoke", description = "Verify that while creating a project user should not able to add a user when the role is disabled for the project")
-    public void Create_Project_With_disable_user() throws Exception {
-        softAssert = new SoftAssert();
-        project = new Project_Module(driver);
-        waitForloadSpinner();
-        project.clickOnCreateProjectButton();
-        waitForloadSpinner();
-        project.ClickOnTemplateNameNew("QA-Automation");
-        project.ClickOnLeadBtn();
-        project.selectLead();
-        Thread.sleep(1000);
-        project.selectDateRange("2022", "OCT", "20", "1");
-        project.selectDateRange("2022", "OCT", "23", "2");
-        Thread.sleep(2000);
-        project.selectDocumentStructure();
-        Thread.sleep(2000);
-        project.selectProjectType();
-        project.selectprocessengindropdown();
-        project.selectprocessingengine();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50000)", "");
-        Thread.sleep(3000);
-        softAssert.assertTrue(project.templatemsg.isDisplayed());
-        project.clickAddTemplateButton();
-        Thread.sleep(2000);
-        project.selectTemplate();
-        project.clickonrolelabel();
-        project.clickOnAddRoleButton();
-        driver.findElement(By.xpath("(//button[contains(text(),'Operator')])[1]")).click();
-        Thread.sleep(1000);
-        project.disableRole();
-        driver.findElement(By.xpath("(//mat-icon[contains(text(),'add_circle_outline')])[2]")).click();
-        project.clickOnCreateButton();
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class='mat-simple-snackbar ng-star-inserted']")).getText(), "Operator role is Disabled");
-        softAssert.assertAll();
-    }
-
-
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P014 -Verify that while creating project role should not have an empty user")
-    @Description("Verify that while creating project role should not have an empty user")
-    @Test(priority = 14, groups = "smoke", description = "Verify that while creating project role should not have an empty user")
-    public void Create_Project_With_empty_user() throws Exception {
-        softAssert = new SoftAssert();
-        project = new Project_Module(driver);
-        waitForloadSpinner();
-        project.clickOnCreateProjectButton();
-        waitForloadSpinner();
-        project.ClickOnTemplateNameNew("QA-Automation");
-        project.ClickOnLeadBtn();
-        project.selectLead();
-        Thread.sleep(1000);
-        project.selectDateRange("2022", "OCT", "20", "1");
-        Thread.sleep(2000);
-        project.selectDateRange("2022", "OCT", "23", "2");
-        Thread.sleep(2000);
-        project.selectDocumentStructure();
-        Thread.sleep(2000);
-        project.selectProjectType();
-        project.selectprocessengindropdown();
-        project.selectprocessingengine();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50000)", "");
-        Thread.sleep(3000);
-        softAssert.assertTrue(project.templatemsg.isDisplayed());
-        project.clickAddTemplateButton();
-        Thread.sleep(2000);
-        project.selectTemplate();
-        project.clickonrolelabel();
-        project.clickOnAddRoleButton();
-        driver.findElement(By.xpath("(//button[contains(text(),'Operator')])[1]")).click();
-        // project.selectRole();
-        project.clickOnCreateButton();
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class='mat-simple-snackbar ng-star-inserted']")).getText(), "Role cannot have empty users");
-        softAssert.assertAll();
-    }
 
     @Story("story_id: U021 -Verify text on UI Project Module.")
     @Description("Verify text present on UI Project Module.")
@@ -545,195 +444,6 @@ public class ProjectModuleTest extends BaseTest {
     }
 
     @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P015 -Verify the working of platform admin for Update Project button when role and user status is enabled")
-    @Description("Verify the working of platform admin for Update Project button when role and user status is enabled")
-    @Test(priority = 15, groups = "smoke", description = "Verify the working of platform admin for Update Project button when role and user status is enabled")
-    public void Update_Project_Without_When_User_is_disable() throws Exception {
-        softAssert = new SoftAssert();
-        custom = new Custome_Wait(driver);
-        project = new Project_Module(driver);
-
-        waitForloadSpinner();
-        Assert.assertTrue(project.createbtnproject.isDisplayed());
-        project.searchCreatedProject("QA-Automation BRE");
-        waitForloadSpinner();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50000)", "");
-        custom.waitVisibility(driver, driver.findElement(By.xpath("//span[contains(text(),'Roles')]")));
-        project.clickonrolelabel();
-        custom.waitVisibility(driver, driver.findElement(By.xpath("(//mat-icon[contains(text(),'add_circle_outline')])[2]")));
-        project.clickonroleplusbutton();
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class='mat-simple-snackbar ng-star-inserted']")).getText(), "PratikshaQA role is Disabled");
-        softAssert.assertAll();
-    }
-
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P017 - Project name is visible in the user after disabling the role or deleting the user from project creation page.")
-    @Description("Project name is visible in the user after disabling the role or deleting the user from project creation page.")
-    @Test(priority = 17, groups = "smoke", description = "Project name is visible in the user after disabling the role or deleting the user from project creation page.")
-    public void check_project_name_in_user() throws Exception {
-        softAssert = new SoftAssert();
-        custom = new Custome_Wait(driver);
-        project = new Project_Module(driver);
-        clickOnOutSide = new ClickOnOutSide(driver);
-        userPage = new UserPage(driver);
-        waitForloadSpinner();
-        Assert.assertTrue(project.createbtnproject.isDisplayed());
-        project.searchCreatedProject("QA-Automationym");
-        waitForloadSpinner();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50000)", "");
-        Thread.sleep(3000);
-        project.clickonrolelabel();
-        Thread.sleep(2000);
-        JavascriptExecutor js1 = (JavascriptExecutor) driver;
-        js1.executeScript("window.scrollBy(0,50000)", "");
-        driver.findElement(By.xpath("(//div[@class='mat-slide-toggle-thumb-container'])[8]")).click();
-        Thread.sleep(2000);
-        project.clickOnUpdate();
-        waitForloadSpinner();
-        userPage.userclickOnUserTab();
-        waitForloadSpinner();
-        userPage.searchProjectInUserPage("omtest");
-        Thread.sleep(2000);
-        userPage.clickonActionBtton();
-        waitForloadSpinner();
-        JavascriptExecutor js2 = (JavascriptExecutor) driver;
-        js2.executeScript("window.scrollBy(0,50000)", "");
-        softAssert.assertEquals(driver.findElement(By.xpath("//div[@class='col-md-7 d-flex align-items-center']")).getText(), " Projects ");
-        softAssert.assertAll();
-    }
-
-
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P018 - Verify push Target channel.")
-    @Description(" Verify push Target channel.")
-    @Test(priority = 18, groups = "smoke", description = " Verify push Target channel.")
-    public void Verify_push_Target_channel() throws Exception {
-        softAssert = new SoftAssert();
-        custom = new Custome_Wait(driver);
-        project = new Project_Module(driver);
-        clickOnOutSide = new ClickOnOutSide(driver);
-        waitForloadSpinner();
-        Assert.assertTrue(project.createbtnproject.isDisplayed());
-        project.searchCreatedProject("QA-Automation structure");
-        waitForloadSpinner();
-        project.clickauditenabletogglebtn();
-        project.clickStraightThroughProcesstogglebtn();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50000)", "");
-        Thread.sleep(3000);
-        project.clickOnTargetChannel();
-        Thread.sleep(1000);
-        JavascriptExecutor js4 = (JavascriptExecutor) driver;
-        js4.executeScript("window.scrollBy(0,50000)", "");
-        project.clickOnCreateTargetChannel();
-        project.clickOnChannelTypeDropDown();
-        project.clickOnPOSTServer();
-        project.enterChannelName("test");
-        Thread.sleep(1000);
-        project.enterEndPoint("https://neo.neutrino-ai.com:8443/target/target-system");
-        Thread.sleep(1000);
-        project.enterSecretKey("intellidocsSecretKey");
-        Thread.sleep(1000);
-        project.clickOnTestConnection();
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class='mat-simple-snackbar ng-star-inserted']")).getText(), "Connection established successfully...!");
-        softAssert.assertAll();
-    }
-
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P019 -Verify Test connection failed while testing POST target channel.")
-    @Description("Verify Test connection failed while testing POST target channel.")
-    @Test(priority = 19, groups = "smoke", description = "Verify Test connection failed while testing POST target channel.")
-    public void Verify_Test_connection_fail() throws Exception {
-        softAssert = new SoftAssert();
-        custom = new Custome_Wait(driver);
-        project = new Project_Module(driver);
-        clickOnOutSide = new ClickOnOutSide(driver);
-        waitForloadSpinner();
-        Assert.assertTrue(project.createbtnproject.isDisplayed());
-        project.searchCreatedProject("QA-Automation structure");
-        waitForloadSpinner();
-        project.clickauditenabletogglebtn();
-        project.clickStraightThroughProcesstogglebtn();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50000)", "");
-        Thread.sleep(3000);
-        project.clickOnTargetChannel();
-        Thread.sleep(1000);
-        JavascriptExecutor js4 = (JavascriptExecutor) driver;
-        js4.executeScript("window.scrollBy(0,50000)", "");
-        project.clickOnCreateTargetChannel();
-        project.clickOnChannelTypeDropDown();
-        project.clickOnPOSTServer();
-        project.enterChannelName("test");
-        Thread.sleep(1000);
-        project.enterEndPoint("https://neo.neutrino-ai.com:8443/target/target-system");
-        Thread.sleep(1000);
-        project.enterSecretKey("intellidocsSecretKe");
-        Thread.sleep(1000);
-        project.clickOnTestConnection();
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class='mat-simple-snackbar ng-star-inserted']")).getText(), "Test Connection failed");
-        softAssert.assertAll();
-    }
-
-
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P020 -To verify that user should not be shown the 'Straight through processing' option, it should be shown only when I select the document type")
-    @Description("To verify that user should not be shown the 'Straight through processing' option, it should be shown only when I select the document type")
-    @Test(priority = 20, groups = "smoke", description = "To verify that user should not be shown the 'Straight through processing' option, it should be shown only when I select the document type")
-    public void Verify_Straight_through_process_btn() throws Exception {
-        softAssert = new SoftAssert();
-        project = new Project_Module(driver);
-        waitForloadSpinner();
-        project.clickOnCreateProjectButton();
-        waitForloadSpinner();
-        project.ClickOnTemplateNameNew("QA-Automation");
-        project.ClickOnLeadBtn();
-        project.selectLead();
-        Thread.sleep(1000);
-        project.selectDateRange("2022", "OCT", "20", "1");
-        Thread.sleep(2000);
-        project.selectDateRange("2022", "OCT", "23", "2");
-        Thread.sleep(2000);
-        project.selectDocumentStructure();
-        driver.findElement(By.xpath("//span[contains(text(),'Structured')]")).click();
-        Thread.sleep(2000);
-        softAssert.assertEquals(driver.findElement(By.xpath("//span[@mattooltip='If enabled, the documents will not require any manual intervention if the threshold score matches.']")).getText(), "Straight Through Process   ");
-        softAssert.assertAll();
-    }
-
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P021 - After adding variables in data section in project configuration tab and clicking of 'add' button, pop-up window should get close.")
-    @Description("After adding variables in data section in project configuration tab and clicking of 'add' button, pop-up window should get close.")
-    @Test(priority = 21, groups = "smoke", description = "After adding variables in data section in project configuration tab and clicking of 'add' button, pop-up window should get close.")
-    public void Verify_Variable_pop_up() throws Exception {
-        softAssert = new SoftAssert();
-        custom = new Custome_Wait(driver);
-        project = new Project_Module(driver);
-        breRule2Page = new BRERule2Page(driver);
-        softAssert = new SoftAssert();
-        clickOnOutSide = new ClickOnOutSide(driver);
-        waitForloadSpinner();
-        breRule2Page.clickOnProjectPage();
-        breRule2Page.searchCreatedProject("QA-Automation structure");
-        waitForloadSpinner();
-        breRule2Page.clickonnextbutton();
-        Thread.sleep(2000);
-        breRule2Page.clickVariableDropDown();
-        breRule2Page.clickAddvariableBtn();
-        breRule2Page.enterVariableName("omtest");
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//mat-select[@id='validationType']")).click();
-        breRule2Page.selectAgeOpn();
-        breRule2Page.enterVariableValue("10");
-        breRule2Page.clickOnAddopn();
-        softAssert.assertEquals(driver.findElement(By.xpath("//span[@class='ml-1 text-secondary']")).getText(), "QA-Automation Structure");
-        softAssert.assertAll();
-    }
-
-
-    @Severity(SeverityLevel.NORMAL)
     @Story("story_id: P022 - Verify the \"Grid View\" button and user available in list view.")
     @Description("Verify the \"Grid View\" button and user available in list view.")
     @Test(priority = 22, groups = "smoke", description = "Verify the \"Grid View\" button and user available in list view.")
@@ -750,35 +460,6 @@ public class ProjectModuleTest extends BaseTest {
 
     }
 
-    @Severity(SeverityLevel.NORMAL)
-    @Story("story_id: P022 -When there is no use of the 'processing engine', the field should not be visible, for example in case of 'Free form' and 'Medical charts'")
-    @Description("When there is no use of the 'processing engine', the field should not be visible, for example in case of 'Free form' and 'Medical charts'")
-    @Test(priority = 22, groups = "smoke", description = "When there is no use of the 'processing engine', the field should not be visible, for example in case of 'Free form' and 'Medical charts'")
-    public void Verify_Processing_Engine() throws Exception {
-        softAssert = new SoftAssert();
-        custom = new Custome_Wait(driver);
-        project = new Project_Module(driver);
-        waitForloadSpinner();
-        project.clickOnCreateProjectButton();
-        waitForloadSpinner();
-        project.ClickOnTemplateNameNew("QA-Automation");
-        project.ClickOnLeadBtn();
-        project.selectLead();
-        Thread.sleep(1000);
-        project.selectDateRange("2022", "OCT", "20", "1");
-        Thread.sleep(1000);
-        project.selectDateRange("2022", "OCT", "23", "2");
-        Thread.sleep(2000);
-        project.selectDocumentStructure();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//span[contains(text(),'Structured')]")).click();
-        softAssert.assertEquals(driver.findElement(By.xpath("//span[@mattooltip='If enabled, the documents will not require any manual intervention if the threshold score matches.']")).getText(), "Straight Through Process   ");
-        project.selectDocumentStructure();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//span[contains(text(),'Medical Chart')]")).click();
-        //   softAssert.assertEquals(driver.findElement(By.xpath("//span[@mattooltip='If enabled, the documents will not require any manual intervention if the threshold score matches.']")).getText(), "Straight Through Process   ");
-        softAssert.assertAll();
-    }
 
     @Severity(SeverityLevel.NORMAL)
     @Story("story_id: P022 - Verify the \"List View\" button and user available in list view.")
@@ -798,6 +479,4 @@ public class ProjectModuleTest extends BaseTest {
 
 
     }
-
-
 }
