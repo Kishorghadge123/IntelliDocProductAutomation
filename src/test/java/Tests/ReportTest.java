@@ -341,6 +341,8 @@ public class ReportTest extends BaseTest {
         Thread.sleep(1000);
         reportPage.clickOnApplyFilter();
     }
+//R013
+
 
     @Severity(SeverityLevel.NORMAL)
     @Story("story_id: U021 -Verify text on UI reports Page.")
@@ -362,6 +364,8 @@ public class ReportTest extends BaseTest {
         reportPage.getTheTextOfListOfButtonOnReportsPage();
         reportPage.getTheTextOfListOfReportsTable();
     }
+
+
 
 
 }

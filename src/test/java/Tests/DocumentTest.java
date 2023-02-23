@@ -35,10 +35,10 @@ public class DocumentTest extends BaseTest {
         loginApplication();
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.close();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.close();
+    }
 
     @Severity(SeverityLevel.NORMAL)
     @Story("Test Case Id: Doc01 - verify_Data_Extracted_From_Document")
@@ -59,8 +59,8 @@ public class DocumentTest extends BaseTest {
         Thread.sleep(3000);
         docobj.clickOnReadyDocument();
         waitForloadSpinner();
-        softAssert.assertEquals(driver.findElement(By.xpath("//button[contains(@class,\"mat-focus-indicator ml-\")]")).getText(), "Cancel");
-        softAssert.assertEquals(driver.findElement(By.xpath("//mat-label[contains(text(),'MedicalReady.pdf')]")).getText(), "MedicalReady.pdf");
+        softAssert.assertEquals(driver.findElement(By.xpath("//button[contains(@class,\"mat-focus-indicator ml-\")]")).getText(),"Cancel");
+        softAssert.assertEquals(driver.findElement(By.xpath("//mat-label[contains(text(),'MedicalReady.pdf')]")).getText(),"MedicalReady.pdf");
 
         softAssert.assertAll();
         docobj.clickOnChartData();
@@ -212,8 +212,8 @@ public class DocumentTest extends BaseTest {
         Thread.sleep(1000);
         docobj.clickOnHCCSaveBtn();
         Thread.sleep(1000);
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class=\"mat-simple-snackbar ng-star-inserted\"]")).getText(), "Please fill all the entries before saving.");
-        softAssert.assertAll();
+softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class=\"mat-simple-snackbar ng-star-inserted\"]")).getText(),"Please fill all the entries before saving.");
+  softAssert.assertAll();
     }
 
 
@@ -300,7 +300,7 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnHCCSaveBtn();
         Thread.sleep(1000);
         docobj.clickonIcdCode();
-        softAssert.assertEquals(driver.findElement(By.xpath("//span[@class=\"mat-option-text\"]")).getText(), "E1100");
+        softAssert.assertEquals(driver.findElement(By.xpath("//span[@class=\"mat-option-text\"]")).getText(),"E1100");
         softAssert.assertAll();
 
 
@@ -351,7 +351,7 @@ public class DocumentTest extends BaseTest {
         custom.waitVisibility(driver, driver.findElement(By.xpath("//span[contains(text(), 'Acquired keratosis follicularis')]")));
         docobj.selectDescriptionType();
         Thread.sleep(2000);
-        docobj.clickOnHcc("111");
+docobj.clickOnHcc("111");
         Thread.sleep(1000);
         docobj.clickOnHCCSaveBtn();
         Thread.sleep(2000);
@@ -404,6 +404,9 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnApplyButton();
         softAssert.assertAll();
     }
+
+
+
 
 
     @Severity(SeverityLevel.NORMAL)
@@ -506,10 +509,12 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnTableArrowDropDown(" Received ");
         Thread.sleep(2000);
         docobj.clickOnTableArrowDropDown(" Received ");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//th[@role=\"columnheader\"])[8]")).getText(), "Action");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//th[@role=\"columnheader\"])[4]")).getText(), "Type");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//th[@role=\"columnheader\"])[8]")).getText(),"Action");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//th[@role=\"columnheader\"])[4]")).getText(),"Type");
         softAssert.assertAll();
     }
+
+
 
 
     @Severity(SeverityLevel.CRITICAL)
@@ -532,17 +537,17 @@ public class DocumentTest extends BaseTest {
 //        docobj.clickOnDropdown();
         docobj.clickOnDropDown();
         Thread.sleep(1000);
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[1]")).getText(), "10");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[2]")).getText(), "20");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[3]")).getText(), "50");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[4]")).getText(), "100");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[5]")).getText(), "200");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[1]")).getText(),"10");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[2]")).getText(),"20");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[3]")).getText(),"50");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[4]")).getText(),"100");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[5]")).getText(),"200");
         Thread.sleep(1000);
         docobj.selectDropDownValue();
         Thread.sleep(1000);
 
-        int documentcount = driver.findElements(By.xpath("//td[@class=\"mat-tooltip-trigger mat-cell cdk-cell cdk-column-document mat-column-document ng-star-inserted\"]")).size();
-        softAssert.assertEquals(documentcount, 10);
+        int documentcount=driver.findElements(By.xpath("//td[@class=\"mat-tooltip-trigger mat-cell cdk-cell cdk-column-document mat-column-document ng-star-inserted\"]")).size();
+            softAssert.assertEquals(documentcount,10);
         Thread.sleep(2000);
         docobj.userClickOnNextpageTab();
         softAssert.assertAll();
@@ -571,7 +576,6 @@ public class DocumentTest extends BaseTest {
         Assert.assertEquals(docobj.getTotalEncounterCountFromDiagnosisTab(), docobj.getTotalEncounterCount()
                 , "Encounter Count does not match.");
     }
-
     @Severity(SeverityLevel.NORMAL)
     @Story("Test Case Id: Doc017 - Verify_the_ICD_Count_matches_the_Number_of_Encounters_in_Diagnosis_Tab_in_Chart_Data")
     @Description("Verify_the_ICD_Count_matches_the_Number_of_Encounters_in_Diagnosis_Tab_in_Chart_Data")
@@ -591,7 +595,7 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnDiagnosisTab();
         Thread.sleep(3000);
         Assert.assertEquals(docobj.getTotalICDCountFromDiagnosisTab(), docobj.getTotalICDCount()
-                , "Encounter Count does not match.");
+                ,"Encounter Count does not match.");
     }
 
 
@@ -669,6 +673,7 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnRejectedDocument();
 
 
+
     }
 
 
@@ -717,17 +722,19 @@ public class DocumentTest extends BaseTest {
         custom.waitVisibility(driver, driver.findElement(By.xpath("//span[contains(text(),' QA-Automation BRE ')]")));
         docobj.clickonsearchProjectName();
         waitForloadSpinner();
-        List<WebElement> count = driver.findElements(By.xpath("//td[@class=\"mat-cell cdk-cell cdk-column-status mat-column-status ng-star-inserted\"]"));
-        for (WebElement doccount : count) {
-            String totalready = doccount.getText();
-            softAssert.assertEquals(driver.findElement(By.xpath("//button[@class=\"mat-focus-indicator btn-secondary white_bg mat-stroked-button mat-button-base docStatus-Ready\"]")).getText(), totalready);
-            String readycolor = driver.findElement(By.xpath("//button[@class=\"mat-focus-indicator btn-secondary white_bg mat-stroked-button mat-button-base docStatus-Ready\"]")).getCssValue("color");
-            String readybackcolor = driver.findElement(By.xpath("//button[@class=\"mat-focus-indicator btn-secondary white_bg mat-stroked-button mat-button-base docStatus-Ready\"]")).getCssValue("background-color");
-            softAssert.assertEquals(readycolor, "rgba(79, 191, 249, 1)");
-            softAssert.assertEquals(readybackcolor, "rgba(225, 245, 255, 1)");
+        List<WebElement> count=driver.findElements(By.xpath("//td[@class=\"mat-cell cdk-cell cdk-column-status mat-column-status ng-star-inserted\"]"));
+        for(WebElement doccount : count)  {
+           String totalready= doccount.getText();
+softAssert.assertEquals(driver.findElement(By.xpath("//button[@class=\"mat-focus-indicator btn-secondary white_bg mat-stroked-button mat-button-base docStatus-Ready\"]")).getText(),totalready);
+            String readycolor=driver.findElement(By.xpath("//button[@class=\"mat-focus-indicator btn-secondary white_bg mat-stroked-button mat-button-base docStatus-Ready\"]")).getCssValue("color");
+            String readybackcolor=driver.findElement(By.xpath("//button[@class=\"mat-focus-indicator btn-secondary white_bg mat-stroked-button mat-button-base docStatus-Ready\"]")).getCssValue("background-color");
+            softAssert.assertEquals(readycolor,"rgba(79, 191, 249, 1)");
+            softAssert.assertEquals(readybackcolor,"rgba(225, 245, 255, 1)");
             softAssert.assertAll();
         }
     }
+
+
 
 
     @Severity(SeverityLevel.NORMAL)
@@ -749,20 +756,20 @@ public class DocumentTest extends BaseTest {
         waitForloadSpinner();
         docobj.clickOnReadyOuterFilterBox();
         Thread.sleep(1000);
-        docobj.clickOnProcessedOuterFilterBox();
+                docobj.clickOnProcessedOuterFilterBox();
         Thread.sleep(1000);
         docobj.clickOnReadyOuterFilterBox();
         Thread.sleep(1000);
 
-        List<WebElement> count = driver.findElements(By.xpath("//td[@class=\"mat-cell cdk-cell cdk-column-status mat-column-status ng-star-inserted\"]"));
-        for (WebElement doccount : count) {
-            String totalproceesed = doccount.getText();
+        List<WebElement> count=driver.findElements(By.xpath("//td[@class=\"mat-cell cdk-cell cdk-column-status mat-column-status ng-star-inserted\"]"));
+        for(WebElement doccount : count)  {
+            String totalproceesed= doccount.getText();
             System.out.println(totalproceesed);
-            softAssert.assertEquals(driver.findElement(By.xpath("//span[contains(text(),'Processed ')]")).getText(), totalproceesed);
-            String proceesedcolor = driver.findElement(By.xpath("//span[contains(text(),'Processed ')]")).getCssValue("color");
-            String proceesedbackcolor = driver.findElement(By.xpath("//span[contains(text(),'Processed ')]")).getCssValue("background-color");
-            softAssert.assertEquals(proceesedcolor, "rgba(50, 205, 48, 1)");
-            softAssert.assertEquals(proceesedbackcolor, "rgba(0, 0, 0, 0)");
+            softAssert.assertEquals(driver.findElement(By.xpath("//span[contains(text(),'Processed ')]")).getText(),totalproceesed);
+            String proceesedcolor=driver.findElement(By.xpath("//span[contains(text(),'Processed ')]")).getCssValue("color");
+            String proceesedbackcolor=driver.findElement(By.xpath("//span[contains(text(),'Processed ')]")).getCssValue("background-color");
+            softAssert.assertEquals(proceesedcolor,"rgba(50, 205, 48, 1)");
+            softAssert.assertEquals(proceesedbackcolor,"rgba(0, 0, 0, 0)");
             softAssert.assertAll();
 
         }
@@ -789,19 +796,21 @@ public class DocumentTest extends BaseTest {
         Thread.sleep(1000);
         docobj.clickOnReadyOuterFilterBox();
         Thread.sleep(2000);
-        List<WebElement> count = driver.findElements(By.xpath("//td[@class=\"mat-cell cdk-cell cdk-column-status mat-column-status ng-star-inserted\"]"));
-        for (WebElement doccount : count) {
-            String totalrejected = doccount.getText();
-            softAssert.assertEquals(driver.findElement(By.xpath("//span[contains(text(),'Rejected ')]")).getText(), totalrejected);
-            String rejectcolor = driver.findElement(By.xpath("//span[contains(text(),'Rejected ')]")).getCssValue("color");
-            String rejectbackgroundcolor = driver.findElement(By.xpath("//span[contains(text(),'Rejected ')]")).getCssValue("background-color");
+        List<WebElement> count=driver.findElements(By.xpath("//td[@class=\"mat-cell cdk-cell cdk-column-status mat-column-status ng-star-inserted\"]"));
+        for(WebElement doccount : count)  {
+            String totalrejected= doccount.getText();
+            softAssert.assertEquals(driver.findElement(By.xpath("//span[contains(text(),'Rejected ')]")).getText(),totalrejected);
+            String rejectcolor=driver.findElement(By.xpath("//span[contains(text(),'Rejected ')]")).getCssValue("color");
+            String rejectbackgroundcolor=driver.findElement(By.xpath("//span[contains(text(),'Rejected ')]")).getCssValue("background-color");
             System.out.println(rejectcolor);
             System.out.println(rejectbackgroundcolor);
-            softAssert.assertEquals(rejectcolor, "rgba(209, 36, 36, 1)");
-            softAssert.assertEquals(rejectbackgroundcolor, "rgba(0, 0, 0, 0)");
+            softAssert.assertEquals(rejectcolor,"rgba(209, 36, 36, 1)");
+            softAssert.assertEquals(rejectbackgroundcolor,"rgba(0, 0, 0, 0)");
             softAssert.assertAll();
         }
     }
+
+
 
 
     @Severity(SeverityLevel.NORMAL)
@@ -839,14 +848,15 @@ public class DocumentTest extends BaseTest {
         waitForloadSpinner();
         docobj.clickOnReadyDocument();
         waitForloadSpinner();
-        docobj.clickOnserachBox();
-        Thread.sleep(1000);
-        docobj.enterTextInSerachBox("26");
-        //NEED TO ADD ASSERTION
-        softAssert.assertAll();
+      docobj.clickOnserachBox();
+      Thread.sleep(1000);
+      docobj.enterTextInSerachBox("26");
+      //NEED TO ADD ASSERTION
+      softAssert.assertAll();
 
 
     }
+
 
 
     @Severity(SeverityLevel.NORMAL)
@@ -880,8 +890,8 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnAddHccPlusBtn();
         Thread.sleep(1000);
         docobj.clickOnHCCSaveBtn();
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class=\"mat-simple-snackbar ng-star-inserted\"]")).getText(), "Please fill all the entries before saving.");
-        softAssert.assertAll();
+        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class=\"mat-simple-snackbar ng-star-inserted\"]")).getText(),"Please fill all the entries before saving.");
+softAssert.assertAll();
 
     }
 
@@ -890,6 +900,8 @@ public class DocumentTest extends BaseTest {
     @Description("valid ICD Code")
     @Test(priority = 28, groups = "smoke", description = "valid ICD Code")
     public void verifyvalidIcdCode() throws Exception {
+
+        Thread.sleep(1000);
         scrollPage = new Scroll_Page(driver);
         docobj = new DocumentPage(driver);
         softAssert = new SoftAssert();
@@ -923,7 +935,6 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnAddIcdBtn();
         Thread.sleep(2000);
         docobj.enterIcdNo("l11");
-        Thread.sleep(1000);
         docobj.selectDescriptionType();
         Thread.sleep(1000);
         docobj.clickOnHCCSaveBtn();
@@ -951,24 +962,23 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnReadyDocument();
         waitForloadSpinner();
         docobj.clickOnChartFlagsDropdown();
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[1]")).getText(), "Clear");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[2]")).getText(), "Non-HCC");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[3]")).getText(), "Invalid Record");
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[4]")).getText(), "Patient name mismatch");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[1]")).getText(),"Clear");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[2]")).getText(),"Non-HCC");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[3]")).getText(),"Invalid Record");
+        softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[4]")).getText(),"Patient name mismatch");
         softAssert.assertAll();
 
 
     }
-
 
     @Severity(SeverityLevel.NORMAL)
     @Story("Test Case Id: Doc030 - Invalid ICD Code")
     @Description("Invalid ICD Code")
     @Test(priority = 30, groups = "smoke", description = "Invalid ICD Code")
     public void verifyInvalidIcdCode() throws Exception {
+        softAssert = new SoftAssert();
         scrollPage = new Scroll_Page(driver);
         docobj = new DocumentPage(driver);
-        softAssert = new SoftAssert();
         custom = new Custome_Wait(driver);
         waitForloadSpinner();
         docobj.clickOnDocumentTab();
@@ -999,18 +1009,17 @@ public class DocumentTest extends BaseTest {
         docobj.clickOnAddIcdBtn();
         Thread.sleep(2000);
         docobj.enterIcdNo("ll11");
-        softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class=\"mat-simple-snackbar ng-star-inserted\"]")).getText(), "Please enter a valid ICD for which HCC is available.");
-        softAssert.assertAll();
+       softAssert.assertEquals(driver.findElement(By.xpath("//simple-snack-bar[@class=\"mat-simple-snackbar ng-star-inserted\"]")).getText(),"Please enter a valid ICD for which HCC is available.");
+softAssert.assertAll();
 
     }
 
-    @Test(priority = 33)
+    @Test(priority = 2)
     public void manual_intervention_structured_ready_document() throws Exception {
         // upload doc to QA-AutoProject-Structured folder in GCP:
-        String document = RandomStringUtils.randomAlphabetic(1);
-        UploadObject.uploadObject(ReadProps.readAttr("project_id"), ReadProps.readAttr("bucket_name"), "inputDocs/QA-Automation Structure/Pfizer" + document + ".jpg", System.getProperty("user.dir") + "\\src\\test\\resources\\structready");
-
-        docobj = new DocumentPage(driver);
+        String document= RandomStringUtils.randomAlphanumeric(10);
+        UploadObject.uploadObject(ReadProps.readAttr("project_id"),ReadProps.readAttr("bucket_name"),"inputDocs/QA-Automation Structure/Pfizer"+ document +".jpg",System.getProperty("user.dir")+"\\src\\test\\resources\\Pfizer.jpg");
+        docobj=new DocumentPage(driver);
         Robot r = new Robot();
         docobj.clickOnDocumentTab();
         Thread.sleep(10000);
@@ -1020,7 +1029,8 @@ public class DocumentTest extends BaseTest {
         Thread.sleep(2000);
         System.out.println(document);
 
-    }
+
+}
 
 
     @Story("story_id: U021 -Verify text on UI Document Page.")

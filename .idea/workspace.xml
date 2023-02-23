@@ -5,43 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96486fa-788a-4d83-8be4-a2ccc738bc44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/structready.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DocumentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/DocumentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Project_Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Project_Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/DocumentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/DocumentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/StructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/StructureTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/AnalyticsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/AnalyticsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/AuditPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/AuditPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/BRERule2Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/BRERule2Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/CreateRolePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/CreateRolePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/DatasetPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/DatasetPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/DocumentPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/DocumentPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/FunctionalPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/FunctionalPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/MedicalPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/MedicalPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/Project_Module.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/Project_Module.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/ReportPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/ReportPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/TemplatePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/TemplatePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/AnalyticsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/AnalyticsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/AuditTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/AuditTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/BRERule2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/BRERule2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/DataSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/DataSetTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/DocumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/DocumentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/FunctionalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/FunctionalTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/MedicalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/MedicalTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/ProjectModuleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/ProjectModuleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/ReportTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/ReportTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/StructureTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/StructureTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/TemplateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/TemplateTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/UserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/ClickOnOutSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/ClickOnOutSide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/Custome_Wait.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/Custome_Wait.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/ReadProps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/ReadProps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/Scroll_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/Scroll_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/SelectDates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/SelectDates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/SortingLists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/SortingLists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Utilities/VerifyTextOfTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Utilities/VerifyTextOfTable.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

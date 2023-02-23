@@ -27,6 +27,7 @@ public class BRERule2Test extends BaseTest {
     Scroll_Page scroll_page;
     ClickOnOutSide clickOnOutSide;
     UserPage userPage;
+
     DocumentPage documentPage;
 
     @BeforeMethod
@@ -38,7 +39,6 @@ public class BRERule2Test extends BaseTest {
     public void tearDown() {
         driver.quit();
     }
-
     @Severity(SeverityLevel.NORMAL)
     @Story("story_id: 001 - To verify navigate to the rule tab next to the project data tab by using di- admin credentials.")
     @Description("To verify navigate to the rule tab next to the project data tab by using di- admin credentials.")
@@ -50,6 +50,10 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+      //  Thread.sleep(1000);
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -75,6 +79,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -95,6 +102,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -115,6 +125,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -134,6 +147,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -153,6 +169,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -165,6 +184,9 @@ public class BRERule2Test extends BaseTest {
         breRule2Page.clickOnProjectPage();
         waitForloadSpinner();
         breRule2Page.searchCreatedProject("186 Structure Project");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -177,6 +199,9 @@ public class BRERule2Test extends BaseTest {
         breRule2Page.clickOnProjectPage();
         waitForloadSpinner();
         breRule2Page.searchCreatedProject("QA-AutoProject-SemiStructured2820im");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(3000);
@@ -190,6 +215,9 @@ public class BRERule2Test extends BaseTest {
         breRule2Page.clickOnProjectPage();
         waitForloadSpinner();
         breRule2Page.searchCreatedProject("Regression Testing 27");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -214,6 +242,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(2000);
@@ -226,7 +257,6 @@ public class BRERule2Test extends BaseTest {
         breRule2Page.clickOnSubdataSetOpn();
         // clickOnOutSide.clickOutside();
         breRule2Page.clickOndatanextBtn();
-        ;
         Thread.sleep(1000);
         breRule2Page.clickOnthreeLineLogoBtn();
         breRule2Page.clickRuledataset();
@@ -246,12 +276,16 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
         breRule2Page.clickVariableDropDown();
         breRule2Page.clickAddvariableBtn();
         breRule2Page.enterVariableName("omtest");
+        Thread.sleep(1000);
         breRule2Page.selectValidationType();
         breRule2Page.selectAgeOpn();
         breRule2Page.enterVariableValue("10");
@@ -274,6 +308,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -293,6 +330,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -313,6 +353,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -334,6 +377,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -354,6 +400,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -378,6 +427,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         waitForloadSpinner();
@@ -407,6 +459,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -433,6 +488,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         waitForloadSpinner();
@@ -441,11 +499,12 @@ public class BRERule2Test extends BaseTest {
         breRule2Page.clickOnConditionBox();
         breRule2Page.clickOnConditionEditBtn();
         Thread.sleep(1000);
-        WebElement Abc = driver.findElement(By.xpath("(//span[contains(text(),'Matches Rule')])[1]"));
-        String s = Keys.chord(Keys.BACK_SPACE.subSequence(1, 8));
+//       driver.findElement(By.xpath("(//span[contains(text(),'Matches Rule')])[1]")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+       WebElement Abc = driver.findElement(By.xpath("(//span[contains(text(),'Matches Rule')])[1]"));
+       String s = Keys.chord(Keys.BACK_SPACE.subSequence(12,1));
         Abc.sendKeys(s);
         // sending DELETE key
-        // Abc.sendKeys(Keys.DELETE);
+         Abc.sendKeys(Keys.DELETE);
         breRule2Page.clickEnterConditionName("omtest");
         Thread.sleep(1000);
         breRule2Page.clickOnSaveCondition();
@@ -464,6 +523,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -488,6 +550,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("888-medical");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         breRule2Page.clickOndatanextBtn();
@@ -512,6 +577,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         waitForloadSpinner();
@@ -552,6 +620,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -591,6 +662,9 @@ public class BRERule2Test extends BaseTest {
         breRule2Page.clickOnProjectPage();
         Thread.sleep(2000);
         breRule2Page.searchCreatedProject("QA-Automation Semi Structure");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -631,7 +705,10 @@ public class BRERule2Test extends BaseTest {
         clickOnOutSide = new ClickOnOutSide(driver);
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
-        breRule2Page.searchCreatedProject("QA-Automation Semi strcture");
+        breRule2Page.searchCreatedProject("QA-Automation Semi structure");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -665,7 +742,10 @@ public class BRERule2Test extends BaseTest {
         clickOnOutSide = new ClickOnOutSide(driver);
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
-        breRule2Page.searchCreatedProject("QA-Automation Semistrcture");
+        breRule2Page.searchCreatedProject("QA-Automation Semi structure");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -705,7 +785,10 @@ public class BRERule2Test extends BaseTest {
         clickOnOutSide = new ClickOnOutSide(driver);
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
-        breRule2Page.searchCreatedProject("QA-Automation Semistrcture");
+        breRule2Page.searchCreatedProject("QA-Automation Semi structure");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -739,6 +822,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation-FreeForm");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -779,6 +865,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation-FreeForm");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -812,6 +901,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation-Medical-One-Option");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -859,6 +951,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation-Medical-One-Option");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -935,6 +1030,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -966,6 +1064,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         waitForloadSpinner();
@@ -997,9 +1098,12 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         breRule2Page.clickOndatanextBtn();
         Thread.sleep(1000);
         breRule2Page.clickOnAddRules();
@@ -1015,14 +1119,16 @@ public class BRERule2Test extends BaseTest {
         breRule2Page.clickOnSourceDropDown();
         breRule2Page.clickOnManuallyOpn();
         //   breRule2Page.clickOnSaveCondition();
+        Thread.sleep(2000);
         breRule2Page.clickOnAttributeDropDownOpn();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         breRule2Page.clickOnContactAttributeOpn();
         //  Thread.sleep(3000);
         breRule2Page.enterAttributeValue("1234567890");
         Thread.sleep(2000);
         breRule2Page.clickOnAttributeSubOpn();
         breRule2Page.clickOnStudentName();
+        Thread.sleep(2000);
         breRule2Page.clickOnOperatorSubDropDown();
         breRule2Page.clickOnOperatorOption();
         breRule2Page.enterAttributeSubValue("Omkar");
@@ -1041,6 +1147,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -1088,6 +1197,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -1119,6 +1231,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -1151,6 +1266,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -1182,6 +1300,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);
@@ -1215,6 +1336,9 @@ public class BRERule2Test extends BaseTest {
         waitForloadSpinner();
         breRule2Page.clickOnProjectPage();
         breRule2Page.searchCreatedProject("QA-Automation BRE");
+        driver.findElement(By.xpath("//mat-icon[contains(text(),'search')]")).click();
+        waitForloadSpinner();
+        driver.findElement(By.xpath("//tr[1]/td[2]")).click();
         waitForloadSpinner();
         breRule2Page.clickonnextbutton();
         Thread.sleep(1000);

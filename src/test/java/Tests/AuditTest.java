@@ -1,6 +1,7 @@
 package Tests;
 
 import Pages.AuditPage;
+import Pages.UserPage;
 import Utilities.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
@@ -18,7 +19,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 
 public class AuditTest extends BaseTest {
@@ -30,13 +33,13 @@ public class AuditTest extends BaseTest {
     Custome_Wait custom;
     SoftAssert softAssert;
     Scroll_Page scroll_page;
+    UserPage userPage;
 
     @BeforeMethod
     public void setmethod() throws Exception {
         setup();
         loginApplication();
     }
-
 
     @AfterMethod
     public void tearDown() {
@@ -202,6 +205,13 @@ public class AuditTest extends BaseTest {
         custom=new Custome_Wait(driver);
         scroll_page = new Scroll_Page(driver);
         SoftAssert softAssert = new SoftAssert();
+        userPage = new UserPage(driver);
+        waitForloadSpinner();
+        userPage.clickOnLogoutButton();
+        waitForloadSpinner();
+        loginPage.EnterUsername("omauditor@gmail.com");
+        loginPage.setPassword("Omkar@000");
+        loginPage.clickLoginButton();
         waitForloadSpinner();
         auditPage.clickOnauditTab();
         waitForloadSpinner();
@@ -223,14 +233,25 @@ public class AuditTest extends BaseTest {
         custom.waitVisibility(driver, driver.findElement(By.xpath("(//div[contains(@class,'mat-select-arrow-wrapper ng-tns-c')]//div[contains(@class,'mat-select-arrow ng-tns')])[1]")));
         auditPage.SelectChatLevelFlagsDropDown();
         Thread.sleep(2000);
+      //  clickOnOutSide.clickOutside();
+        Set w = driver.getWindowHandles();
+        // window handles iterate
+        Iterator t = w.iterator();
+        String ch = (String) t.next();
+        String pw = (String) t.next();
+        // switching child window
+        driver.switchTo().window(pw);
+        driver.close();
+        // switching parent window
+        driver.switchTo().window(ch);
         auditPage.SelectChatLevelFlags(1);
         custom.waitVisibility(driver, driver.findElement(By.xpath("//span[contains(@class,'mat-expansion-indicator ng-tns-c')]")));
         auditPage.clickOnChatCardDropDown();
         Thread.sleep(2000);
-        softAssert.assertTrue(driver.findElement(By.xpath("//div[contains(@class,'chronicConditionsTable ng-star-inserted')]")).isDisplayed());
-        softAssert.assertEquals(driver.findElement(By.xpath("(//span[contains(text(),'Kordus, Elaine M')])[1]")).getText().split("Elaine")[0].strip(), "Kordus,");
+        softAssert.assertEquals(driver.findElement(By.xpath("//span[@mattooltipclass='primary-tooltip']")).getText(),"Operator Name: omoperator@gmail.com");
         Thread.sleep(2000);
         scroll_page.ScrollUpDown(auditPage.ssn);
+        softAssert.assertAll();
     }
     @Severity(SeverityLevel.NORMAL)
     @Story("story_id: AU008 - verifyTheClearFilterButtonInFilter")
@@ -273,6 +294,8 @@ public class AuditTest extends BaseTest {
         waitForloadSpinner();
         auditPage.clickOnauditTab();
         waitForloadSpinner();
+        auditPage.selectProject();
+        Thread.sleep(3000);
 //        auditPage.clickonGridIcon();
 //        Thread.sleep(2000);
         auditPage.clickOnTableArrowDropDown(" Documents ");
@@ -324,6 +347,8 @@ public class AuditTest extends BaseTest {
         waitForloadSpinner();
    /* docobj.clickonGridIcon();
     Thread.sleep(5000);*/
+        auditPage.selectProject();
+        Thread.sleep(2000);
         JavascriptExecutor jsp = (JavascriptExecutor) driver;
         jsp.executeScript("window.scrollBy(0,5000)", "");
         Thread.sleep(5000);

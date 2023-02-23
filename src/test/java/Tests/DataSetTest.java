@@ -31,11 +31,10 @@ public class DataSetTest extends BaseTest {
         loginApplication();
     }
 
-   @AfterMethod
+    @AfterMethod
     public void tearDown() {
-
-        driver.quit();
-   }
+      driver.quit();
+    }
 
     @Severity(SeverityLevel.NORMAL)
     @Story("story_id: D001  - verify that user is able to Check search Datasets on user page ")
@@ -253,7 +252,7 @@ public class DataSetTest extends BaseTest {
         DatasetPageObj.clickONDatasetPage();
         waitForloadSpinner();
         Thread.sleep(3000);
-        softAssert.assertEquals(driver.findElement(By.xpath("//strong[contains(text(),'List of Datasets')]")).getText(), "List of Datasets");
+       softAssert.assertEquals(driver.findElement(By.xpath("//strong[contains(text(),'List of Datasets')]")).getText(), "List of Datasets");
         DatasetPageObj.getTheTextOfListOfDataSet();
         softAssert.assertEquals(driver.findElement(By.xpath("//th[contains(@class,'mat-header-cell cdk-header-cell font-14px cdk')]")).getText(), "Action");
         DatasetPageObj.searchPatientName();
@@ -314,6 +313,7 @@ public class DataSetTest extends BaseTest {
         act.moveToElement(DatasetPageObj.createDataSetName1,18,12).click().build().perform();
         softAssert.assertEquals(driver.findElement(By.xpath("//mat-error[@role=\"alert\"]")).getText(),"Please enter only alphabets or digits.");
         WebElement chooseFile = driver.findElement(By.xpath("(//input[@type='file'])[3]"));
+
         chooseFile.sendKeys("C:\\Users\\bagal\\OneDrive\\Documents\\dataset.csv");
         Thread.sleep(2000);
     softAssert.assertAll();
@@ -341,7 +341,7 @@ public class DataSetTest extends BaseTest {
         DatasetPageObj.createDatasetFileName("QA");
         Thread.sleep(2000);
         WebElement chooseFile = driver.findElement(By.xpath("(//input[@type='file'])[3]"));
-        chooseFile.sendKeys("C:\\Users\\bagal\\OneDrive\\Documents\\dataset.csv");
+        chooseFile.sendKeys("C:\\Users\\kishor_ghadge\\IdeaProjects\\dataset.csv");
         Thread.sleep(2000);
         DatasetPageObj.clickOnValiadationFirstDropdown();
         DatasetPageObj.selectValType1();
@@ -353,7 +353,7 @@ public class DataSetTest extends BaseTest {
         js.executeScript("window.scrollBy(0,-20000)", "");
         Thread.sleep(2000);
         DatasetPageObj.showDataFormat();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[1]")).getText(),"mm/dd/yyyy");
         softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[2]")).getText(),"dd/mm/yyyy");
         softAssert.assertEquals(driver.findElement(By.xpath("(//span[@class=\"mat-option-text\"])[3]")).getText(),"mm-dd-yyyy");
